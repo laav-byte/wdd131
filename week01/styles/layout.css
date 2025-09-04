@@ -1,29 +1,31 @@
 /* Apply grid to the body */
 body {
     display: grid;
-    grid-template-rows: auto auto 1fr auto; /* header, nav, content, footer */
+    grid-template-rows: auto 1fr auto; /* header+nav = auto, content = flex, footer = auto */
     min-height: 100vh;
     margin: 0;
-    font-family: "Georgia", serif
+    font-family: Arial, sans-serif;
+    background-color: #fffdd0; /* cream */
   }
-  
   /* Header */
-  header {
+header {
+    display: block;                /* default block layout */
     padding: 1rem;
-    background-color: #556b2f;
-    text-align: left;
+    background-color: #556b2f;     /* olive green */
     font-family: "Brush Script MT", cursive;
     color: #fffdd0;
   }
   
-  /* Navigation */
+  /* Navigation inside header */
   nav {
-    background-color: #6b8e23;
+    margin-top: 0.5rem;            /* space between heading and nav */
   }
-  /* Flexbox for nav items */
+  
   nav ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
     justify-content: space-evenly; /* equal spacing across */
   }
   
@@ -33,10 +35,12 @@ body {
     font-weight: bold;
   }
   
-  /* Main content and sidebar */
+  /* Main content + sidebar */
   .content {
     display: grid;
-    grid-template-columns: 3fr 1fr; /* main is bigger, sidebar smaller */
+    grid-template-columns: 3fr 1fr; /* main larger, sidebar smaller */
+    gap: 1rem;
+    padding: 1rem;
   }
   
   main {
@@ -55,6 +59,7 @@ body {
   footer {
     background-color: #556b2f;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;   /* smaller padding so not too thick */
     color: #fffdd0;
   }
+  
