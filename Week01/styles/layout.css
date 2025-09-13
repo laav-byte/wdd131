@@ -1,0 +1,65 @@
+/* Apply grid to the body */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* header+nav = auto, content = flex, footer = auto */
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fffdd0; /* cream */
+  }
+  /* Header */
+header {
+    display: block;                /* default block layout */
+    padding: 1rem;
+    background-color: #556b2f;     /* olive green */
+    font-family: "Brush Script MT", cursive;
+    color: #fffdd0;
+  }
+  
+  /* Navigation inside header */
+  nav {
+    margin-top: 0.5rem;            /* space between heading and nav */
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly; /* equal spacing across */
+  }
+  
+  nav a {
+    color: #fffdd0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Main content + sidebar */
+  .content {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* main larger, sidebar smaller */
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  main {
+    background-color: #f5f5dc;
+    padding: 1rem;
+    border: 2px solid #556b2f;
+  }
+  
+  .sidebar {
+    background-color: #fafad2;
+    padding: 1rem;
+    border: 2px solid #6b8e23;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #556b2f;
+    text-align: center;
+    padding: 0.5rem;   /* smaller padding so not too thick */
+    color: #fffdd0;
+  }
+  
