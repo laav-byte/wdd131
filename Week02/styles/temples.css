@@ -1,0 +1,117 @@
+body {
+    background-color: #F8EEDF;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background-color: #8E1616;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+header h1 {
+    color: #E8C999;
+}
+
+/* NAVIGATION */
+nav {
+    width: 100%;
+    margin-top: 0;   
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* hidden by default on small */
+    flex-direction: column;
+}
+nav ul.show {
+    display: flex;
+}
+nav a {
+    display: block;
+    color: antiquewhite;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+nav a:hover {
+    border: #556b2f solid 0.2px;
+    border-radius: 5px;
+    background-color: #E8C999;
+    color: #000000;
+}
+
+/* Hamburger button for mobile */
+.nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: right;
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+/* MAIN CONTENT */
+main {
+    display: grid;
+    grid-template-columns: 1fr;  /* default: 1 column on small screens */
+    gap: 1rem;
+    padding: 1rem;
+}
+main h2 {
+    grid-column: 1 / -1; /* span full width */
+    text-align: center;
+}
+
+/* IMAGE CARDS */
+.card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+/* FOOTER */
+header, footer {
+    display: block;
+    padding: 1rem;
+    background-color: #8E1616;
+    color: white;
+    text-align: center;
+}
+
+/* mobile first */
+/* NAVIGATION */
+.nav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;             /* hidden by default */
+    flex-direction: column;
+}
+
+.nav-links ul.show {
+    display: flex;             /* visible when toggled */
+}
+
+.nav-links a {
+    display: block;
+    color: antiquewhite;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}

@@ -1,0 +1,39 @@
+@media screen and (min-width: 900px) {
+  /* NAVIGATION on large */
+  nav ul {
+      display: flex;              /* show links inline */
+      flex-direction: row;
+      justify-content: space-evenly;
+      position: static;
+  }
+  .nav-links ul {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+  .nav-toggle {
+      display: none; /* hide hamburger */
+  }
+
+  /* GALLERY on large */
+  main {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  .nav-toggle {
+      display: none;   /* hide the button on desktop */
+  }
+    
+  .nav-links {
+      width: 100%; /* take full header width */
+      display: flex !important;  /* always visible on desktop */
+      flex-direction: row;
+    }
+  .nav-links li {
+      flex: 1; /* let each link take equal space */
+      text-align: center;
+  }
+}
