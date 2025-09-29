@@ -1,0 +1,84 @@
+header, footer {
+    background-color: #D97D55;
+    padding: 10px 0;
+    text-align: center;
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero {
+    position: relative;
+    width: 100%;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Style for both sections */
+  .data .label, .weatherData .label {
+    font-weight: bold;
+    color: #381c33;   /* matches your theme */
+    margin-right: 0.5rem;
+  }
+
+  .data, 
+  .weatherData {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 250px;
+  }
+  
+  .data h2,
+  .weatherData h2 {
+    background: #B8C4A9; /* dark purple */
+    color: black;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .weatherData h2 img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0; /* prevent it from collapsing */
+  }
+  
+  /* Desktop overlay */
+  @media (min-width: 1000px) {
+    .data {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+  
+    .weatherData {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+    }
+  }
+  
+  /* Mobile fallback (sections below picture) */
+  @media (max-width: 999px) {
+    .data, 
+    .weatherData {
+      margin: 1rem auto;
+    }
+  }
+  
+
+  

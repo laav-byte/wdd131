@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Lato:ital,wght@0,400;0,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Dirt&family=Rye&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>La Union</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/launion-large.webp">
+                <source media="(min-width: 500px)" srcset="images/launion-medium.webp">
+                <img src="images/launion-small.webp" alt="La Union Beach">
+            </picture>
+    
+            <section class="data">
+                <h2>Data</h2>
+                <p><span class="label">Area:</span> 578.88 square miles</p>
+                <p><span class="label">Population:</span> 822,352 people</p>
+                <p><span class="label">Capital:</span> San Fernando City</p>
+                <p><span class="label">Languages:</span> Ilocano is the most prominent, alongside Tagalog and English</p>
+                <p><span class="label">Currency:</span> Philippine peso (PHP)</p>
+                <p><span class="label">Time Zone:</span> UTC+8 (Philippine Standard Time or PHST)</p>
+                <p><span class="label">Calling Code:</span> +63 (for international calls to the Philippines)</p>
+                <p><span class="label">Internet TLD:</span> .ph (for the Philippines)</p>
+            </section>
+            
+    
+            <section class="weatherData">
+                <h2>
+                  <img src="images/weather-icon.svg" alt="Weather Icon" class="weatherIcon">
+                  Weather
+                </h2>
+                <p id="temperature"><span class="label">Temperature:</span> </p>
+                <p id="conditions"><span class="label">Conditions:</span> </p>
+                <p id="wind"><span class="label">Wind Speed:</span> </p>
+                <p id="windchill"><span class="label">Wind Chill:</span> </p>
+              </section>
+            
+        </div>
+    </main>
+    
+    <footer>
+        <p class="credits">
+            <span id="currentyear">&copy; Loara Adyz Acosta</span>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
