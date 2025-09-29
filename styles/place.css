@@ -1,12 +1,23 @@
+:root {
+    --primary-color: #D97D55;
+    --text-color: #000000;
+    --background-color: #FFFFFF;
+}
 header, footer {
-    background-color: #D97D55;
+    background-color: var(--primary-color);
     padding: 10px 0;
     text-align: center;
     font-family: "Rubik Dirt", system-ui;
     font-weight: 400;
     font-style: normal;
-    color: black;
+    color: var(--text-color);
 }
+
+footer .credits::after {
+    content: " • All rights reserved";
+    font-style: italic;
+    color: #333;
+  }
 
 .hero img {
     width: 100%;
@@ -27,7 +38,7 @@ header, footer {
   /* Style for both sections */
   .data .label, .weatherData .label {
     font-weight: bold;
-    color: #381c33;   /* matches your theme */
+    color: #381c33;  
     margin-right: 0.5rem;
   }
 
@@ -41,8 +52,8 @@ header, footer {
   
   .data h2,
   .weatherData h2 {
-    background: #B8C4A9; /* dark purple */
-    color: black;
+    background: #B8C4A9; 
+    color: var(--text-color);
     padding: 0.5rem;
     border-radius: 6px;
     font-size: 1.2rem;
@@ -79,6 +90,3 @@ header, footer {
       margin: 1rem auto;
     }
   }
-  
-
-  
