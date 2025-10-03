@@ -1,0 +1,29 @@
+img {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    height: auto;
+    opacity: 0; /* start hidden */
+    filter: brightness(0);
+    transition: opacity 2s ease-in, filter 2s ease-in;
+  }
+  
+img.fade-in {
+    opacity: 1;
+    filter: brightness(1);
+  }
+
+h1{
+    text-align: center; 
+    background-color: lightgray;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
+    margin: 2rem 0;
+    background-color: lightgray;
+}
