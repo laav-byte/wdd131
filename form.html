@@ -22,9 +22,12 @@
         <form id="reviewForm" action="review.html" method="get">
             <label for="productName">Product Name <span aria-hidden="true" class="req">*</span></label>
             <select id="productName" name="productName" required>
-              <option value="" disabled selected>Select a Product ...</option>
-              <span aria-hidden="true" class="req">*</span>
-            </select>
+                <label for="productName">Product Name</label>
+                <span aria-hidden="true" class="req">*</span>
+                <select id="productName" name="productName" required>
+                  <option value="" disabled selected>Select a Product ...</option>
+                </select>
+                
       
             <label>Overall Rating <span aria-hidden="true" class="req">*</span></label>
             <div class="rating">
