@@ -190,6 +190,10 @@
   button:hover {
     background-color: var(--accent-hover);
   }
+
+ .submit {
+    color: var(--font-color);
+  }
   
   /* ==========================================
      📱 RESPONSIVE DESIGN
