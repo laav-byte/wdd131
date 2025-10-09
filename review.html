@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <meta name="author" content="Loara Adyz A. Villa">
+  <meta name="description" content="This page displays the details of the submitted product review and keeps track of the number of reviews submitted using localStorage.">
+  
+</head>
+<body>
+  <div class="container">
+    <h1>✅ Review Submitted Successfully!</h1>
+    <h2>Submission Details</h2>
+    <p><strong>Product:</strong> <span id="product"></span></p>
+    <p><strong>Rating:</strong> <span id="rating"></span></p>
+    <p><strong>Installed On:</strong> <span id="date"></span></p>
+    <p><strong>Useful Features:</strong> <span id="features"></span></p>
+    <p><strong>Your Comments:</strong> <span id="comments"></span></p>
+    <p><strong>Your Name:</strong> <span id="username"></span></p>
+
+    <p id="reviewCounter"></p>
+    <button onclick="window.location.href='form.html'">Return to Main Page</button>
+  </div>
+
+  <script>
+    // --- Function to read URL parameters ---
+    function getQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      const features = params.getAll("features"); // multiple checkboxes
+      return {
+        product: params.get("productName") || "(not specified)",
+        rating: params.get("rating") || "(none)",
+        date: params.get("installationDate") || "(none)",
+        features: features.length > 0 ? features.join(", ") : "(none)",
+        comments: params.get("writtenReview") || "(none)",
+        username: params.get("userName") || "(anonymous)"
+      };
+    }
+
+    // --- Display submission details ---
+    const data = getQueryParams();
+    document.getElementById("product").textContent = data.product;
+    document.getElementById("rating").textContent = data.rating;
+    document.getElementById("date").textContent = data.date;
+    document.getElementById("features").textContent = data.features;
+    document.getElementById("comments").textContent = data.comments;
+    document.getElementById("username").textContent = data.username;
+
+    // --- LocalStorage counter ---
+    let count = localStorage.getItem("reviewCount");
+    if (!count) count = 0;
+    count = parseInt(count) + 1;
+    localStorage.setItem("reviewCount", count);
+
+    document.getElementById("reviewCounter").textContent =
+      `You have completed ${count} review${count > 1 ? "s" : ""}.`;
+  </script>
+</body>
+</html>
