@@ -20,15 +20,12 @@
     </header>
     <main>
         <form id="reviewForm" action="review.html" method="get">
+
             <label for="productName">Product Name <span aria-hidden="true" class="req">*</span></label>
             <select id="productName" name="productName" required>
-                <label for="productName">Product Name</label>
-                <span aria-hidden="true" class="req">*</span>
-                <select id="productName" name="productName" required>
-                  <option value="" disabled selected>Select a Product ...</option>
-                </select>
-                
-      
+              <option value="" disabled selected>Select a Product ...</option>
+            </select>
+          
             <label>Overall Rating <span aria-hidden="true" class="req">*</span></label>
             <div class="rating">
               <div class="star-container">
@@ -52,45 +49,41 @@
                 <input type="radio" id="rating5" name="rating" value="5" />
               </div>
             </div>
-      
+          
             <label for="installationDate">Date of Installation <span aria-hidden="true" class="req">*</span></label>
-            <input
-              type="date"
-              id="installationDate"
-              name="installationDate"
-              required
-            />
-      
+            <input type="date" id="installationDate" name="installationDate" required>
+          
             <fieldset class="form-control">
-                <legend class="label">Which features did you find useful? <span class="muted">(Check all that apply)</span></legend>
-                <div class="checks">
-                    <div class="check">
-                        <input type="checkbox" id="durability" name="features" value="Durability" />
-                        <label for="durability">Durability</label>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" id="ease" name="features" value="Ease of Use" />
-                        <label for="ease">Ease of Use</label>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" id="performance" name="features" value="Performance" />
-                        <label for="performance">Performance</label>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" id="design" name="features" value="Design" />
-                        <label for="design">Design</label>
-                    </div>
+              <legend class="label">Which features did you find useful? <span class="muted">(Check all that apply)</span></legend>
+              <div class="checks">
+                <div class="check">
+                  <input type="checkbox" id="durability" name="features" value="Durability">
+                  <label for="durability">Durability</label>
                 </div>
+                <div class="check">
+                  <input type="checkbox" id="ease" name="features" value="Ease of Use">
+                  <label for="ease">Ease of Use</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" id="performance" name="features" value="Performance">
+                  <label for="performance">Performance</label>
+                </div>
+                <div class="check">
+                  <input type="checkbox" id="design" name="features" value="Design">
+                  <label for="design">Design</label>
+                </div>
+              </div>
             </fieldset>
-      
+          
             <label for="writtenReview">Written Review <span class="muted">(Optional)</span></label>
             <textarea id="writtenReview" name="writtenReview"></textarea>
-      
+          
             <label for="userName">User Name <span class="muted">(Optional)</span></label>
-            <input type="text" id="userName" name="userName" />
-      
-            <input type="submit" value="submit" />
+            <input type="text" id="userName" name="userName">
+          
+            <input type="submit" value="submit">
           </form>
+          
     </main>
     <footer>
         <p class="credits">
