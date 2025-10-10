@@ -20,22 +20,20 @@ header, footer {
 
 p{
     font-family: "Golos Text", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: medium;
+    
   }
 
 h2{
     font-family: "Golos Text", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
   }
 
 h1 {
     font-family: "Golos Text", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
   }
