@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DC and AC Machinery Gallery - This website is a gallery of different types of AC and DC machines. It includes images and descriptions of various machines used in electrical engineering.">
+    <meta name="Author" content="Loara Adyz Villa">
+    <link rel="stylesheet" href="styles/acdcmachinery.css">
+    <link rel="stylesheet" href="styles/acdcmachinerylarge.css">
+    <script src="scripts/acdcmachinery.js" defer></script>
+    <title>DC and AC Machinery Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>DC and AC Machinery Application</h1>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-links">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">DC Generators</a></li>
+            <li><a href="">DC Motors</a></li>
+            <li><a href="">Transformers</a></li>
+            <li><a href="">Alternator</a></li>
+            <li><a href="">Induction Motor</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h2>Home</h2>
+    <div class="card-container" id="machineriesContainer"></div>
+    
+    <div class="quiz-button">
+        <button id="show-quiz-btn">Take the Quiz</button>
+      </div>
+      
+    <section class="quiz-section">
+        <h2>Machine Identification Quiz</h2>
+        <div id="quiz-container">
+          <div id="question-area">
+            <h3 id="question"></h3>
+            <img id="quiz-image" alt="Machine Image" loading="lazy" />
+          </div>
+      
+          <form id="quiz-form">
+            <label><input type="radio" name="answer" value="DC Motor" required> DC Motor</label>
+            <label><input type="radio" name="answer" value="DC Generator"> DC Generator</label>
+            <label><input type="radio" name="answer" value="Induction Motor"> Induction Motor</label>
+            <label><input type="radio" name="answer" value="Transformer"> Transformer</label>
+            <label><input type="radio" name="answer" value="Alternator"> Alternator</label>
+            <label><input type="radio" name="answer" value="AC/DC Motor"> AC/DC Motor</label>
+            <button type="submit">Submit Answer</button>
+          </form>
+      
+          <p id="feedback"></p>
+          <p id="score"></p>
+        </div>
+      </section>
+      
+</main>
+<footer>
+    <p class="credits">
+        <span id="currentyear">&copy; Loara Adyz Acosta</span>
+    </p>
+    <p id="lastModified"></p>
+</footer>
+</body>
+</html>

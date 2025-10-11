@@ -1,0 +1,268 @@
+/* =========================================
+   GLOBAL VARIABLES
+========================================= */
+:root {
+    --color-blue: #004080;
+    --color-white: #FFFFFF;
+    --color-gray: #f9f9f9;
+
+    --font-family: 'Golos Text', sans-serif;
+    --font-weight-h1: 900;
+    --font-weight-h2: 600;
+    --font-weight-p: 400;
+}
+
+/* =========================================
+   BASE STYLES
+========================================= */
+body {
+    background-color: var(--color-white);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-p);
+    color: var(--color-gray);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+header {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    padding: 1rem;
+    text-align: center;
+}
+header h1 {
+    font-weight: var(--font-weight-h1);
+    font-style: normal;
+    color: var(--color-white);
+    margin: 0;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+nav {
+    width: 100%;
+    margin-top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* hidden by default on small */
+    flex-direction: column;
+}
+
+nav ul.show {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: var(--color-blue);
+}
+
+nav a:hover {
+    background-color: var(--color-gray);
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    border-radius: 5px;
+}
+
+/* Hamburger button for mobile */
+.nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: right;
+    width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    color: #333;
+    background-color: var(--color-white);
+}
+
+main h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-weight: var(--font-weight-h2);
+    color: var(--color-blue);
+}
+
+/* =========================================
+   IMAGE CARDS
+========================================= */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.machine-card {
+    background: var(--color-gray);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.machine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.machine-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.machine-card h2 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-h2);
+    color: var(--color-blue);
+}
+
+.machine-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-p);
+    color: #555;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem;
+    font-weight: var(--font-weight-p);
+}
+
+/* =========================================
+   MOBILE FIRST NAVIGATION
+========================================= */
+.nav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+}
+
+.nav-links ul.show {
+    display: flex;
+}
+
+.nav-links a {
+    display: block;
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: var(--color-gray);
+    color: var(--color-blue);
+}
+
+.quiz-section {
+    background: #f2f6fc;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  #quiz-image {
+    width: 300px;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  #quiz-form {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  #quiz-form label {
+    background-color: #eef2f8;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  #quiz-form button {
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  #quiz-form button:hover {
+    background-color: #0066cc;
+  }
+  
+  .quiz-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .quiz-section.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  #show-quiz-btn {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    font-size: 1.2rem;        /* makes text larger */
+    padding: 1rem 2rem;       /* increases button size */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 1.5rem auto;      /* centers the button */
+  }
+  
+  #show-quiz-btn:hover {
+    background-color: var(--color-gray);
+    color: var(--color-blue);
+    border: 2px solid var(--color-blue);
+  }
+  
