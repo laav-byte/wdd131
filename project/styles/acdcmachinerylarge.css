@@ -23,12 +23,8 @@
   
     /* Force nav to show */
     .nav-links ul {
-      display: flex !important;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-      margin: 0;
-      padding: 0;
+        display: none;              /* hidden until toggled open */
+        flex-direction: column;     /* stack items vertically */
     }
   
     .nav-links li {
